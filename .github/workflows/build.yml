@@ -35,6 +35,23 @@ jobs:
           name: AgentMode.app
           path: AgentMode.zip
 
+      - name: Publish rolling "latest" release (main)
+        if: github.ref == 'refs/heads/main'
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: latest
+          name: AgentMode (latest build)
+          files: AgentMode.zip
+          body: |
+            **Download `AgentMode.zip` below**, unzip it, drag `AgentMode.app`
+            to your Applications folder, then **right-click → Open → Open**
+            the first time (the build is not notarized).
+
+            Look for the moon/bolt icon in your menu bar — there is no Dock icon.
+
+            Universal binary (Apple Silicon + Intel), built automatically from
+            the latest commit on `main`.
+
       - name: Publish release (on version tags)
         if: startsWith(github.ref, 'refs/tags/v')
         uses: softprops/action-gh-release@v2
