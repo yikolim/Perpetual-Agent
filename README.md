@@ -10,6 +10,20 @@ when work finishes, and automatically restores normal sleep behavior.
 
 ---
 
+## Download (no build needed)
+
+**[⬇ Download AgentMode.zip](https://github.com/yikolim/Perpetual-Agent/releases/download/latest/AgentMode.zip)** — built automatically from the latest `main` (universal: Apple Silicon + Intel).
+
+1. Unzip, drag `AgentMode.app` into **Applications**.
+2. First launch: **right-click → Open → Open** (the build is ad-hoc signed, not notarized).
+3. Allow notifications when asked. Look for the **moon/bolt icon in the menu bar** — there is no Dock icon.
+
+All releases: <https://github.com/yikolim/Perpetual-Agent/releases>
+
+---
+
+Prefer building from source? Read on.
+
 ## Requirements
 
 - macOS 14 (Sonoma) or newer — Apple Silicon or Intel
