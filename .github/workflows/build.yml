@@ -1,0 +1,49 @@
+name: Build AgentMode.app
+
+on:
+  push:
+    branches: [main]
+    tags: ["v*"]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: macos-14
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Build universal binary (arm64 + x86_64)
+        run: |
+          ARCH=arm64 ./build.sh
+          cp build/AgentMode.app/Contents/MacOS/AgentMode /tmp/AgentMode-arm64
+          ARCH=x86_64 ./build.sh
+          lipo -create /tmp/AgentMode-arm64 \
+               build/AgentMode.app/Contents/MacOS/AgentMode \
+               -output build/AgentMode.app/Contents/MacOS/AgentMode
+          codesign --force --deep --sign - build/AgentMode.app
+          lipo -info build/AgentMode.app/Contents/MacOS/AgentMode
+
+      - name: Zip the app
+        run: ditto -c -k --keepParent build/AgentMode.app AgentMode.zip
+
+      - name: Upload build artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: AgentMode.app
+          path: AgentMode.zip
+
+      - name: Publish release (on version tags)
+        if: startsWith(github.ref, 'refs/tags/v')
+        uses: softprops/action-gh-release@v2
+        with:
+          files: AgentMode.zip
+          generate_release_notes: true
+          body: |
+            **Download `AgentMode.zip` below**, unzip it, drag `AgentMode.app`
+            to your Applications folder, then **right-click → Open → Open**
+            the first time (the build is not notarized).
+
+            Look for the moon/bolt icon in your menu bar — there is no Dock icon.
