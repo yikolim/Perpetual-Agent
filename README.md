@@ -97,6 +97,7 @@ battery, enable **Lid-closed mode (admin)** in the menu:
 | Battery cutoff | 20 % | On battery, release keep-awake below this level |
 | Require charger | off | Only keep awake while plugged in |
 | Sleep when agents finish (on battery) | off | Actively puts the Mac to sleep (`pmset sleepnow`) once the last agent exits and the grace period runs out — only on battery, and never while a Claude Code / Codex / other monitored agent is still running |
+| Keep screen on while agents run | off | Also prevents display sleep while agents are detected (by default only system sleep is prevented — the screen may still turn off); released the moment work ends |
 | Monitored processes | built-ins | Add your own name substrings (e.g. `my-agent`) |
 | Launch at login | off | Registers via `SMAppService` |
 

@@ -69,6 +69,7 @@ Agent Mode is an **agent-aware supervisor**, not a keep-awake toggle:
 | Lid-closed mode | Optional: keep running with the laptop closed, on battery. Uses the macOS admin dialog — the app never sees your password. |
 | Battery protection | Configurable cutoff (default 20 %), optional require-charger mode, hard floor at 10 %. Never fights macOS thermal protection. |
 | Active sleep | Opt-in: when the last agent finishes on battery, the Mac is actively put to sleep to save power — never while anything is running. |
+| Screen keep-awake | Opt-in: keep the display on while agents are detected — watch the run live without touching the mouse; screen sleep returns the moment work ends. |
 | Bulletproof restore | Your previous sleep settings are recorded before any change and restored on stop, quit — or automatically at next launch after a crash or force-quit. |
 | Failsafe timeout | Never stays awake past a configurable limit (default 12 h), even if a process wedges. |
 | Notifications | Agent finished, agent disappeared, battery threshold, mode stopped, sleep restored. |
