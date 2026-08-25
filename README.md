@@ -1,4 +1,4 @@
-# Agent Mode
+# Noesis
 
 > Close your Mac. Your agents keep working.
 
@@ -12,9 +12,9 @@ when work finishes, and automatically restores normal sleep behavior.
 
 ## Download (no build needed)
 
-**[⬇ Download AgentMode.zip](https://github.com/yikolim/Perpetual-Agent/releases/download/latest/AgentMode.zip)** — built automatically from the latest `main` (universal: Apple Silicon + Intel).
+**[⬇ Download Noesis.zip](https://github.com/yikolim/Perpetual-Agent/releases/download/latest/Noesis.zip)** — built automatically from the latest `main` (universal: Apple Silicon + Intel).
 
-1. Unzip, drag `AgentMode.app` into **Applications**.
+1. Unzip, drag `Noesis.app` into **Applications**.
 2. First launch: **right-click → Open → Open** (the build is ad-hoc signed, not notarized).
 3. Allow notifications when asked. Look for the **moon/bolt icon in the menu bar** — there is no Dock icon.
 
@@ -45,7 +45,7 @@ cd Perpetual-Agent
 ./build.sh --run
 ```
 
-This compiles everything with `swiftc` into `build/AgentMode.app` and launches
+This compiles everything with `swiftc` into `build/Noesis.app` and launches
 it. Look for a small **moon icon** (or a bolt, if an agent is already running)
 in your menu bar — the app has no Dock icon by design.
 
@@ -54,7 +54,7 @@ in your menu bar — the app has no Dock icon by design.
 ```bash
 brew install xcodegen     # once
 xcodegen generate
-open AgentMode.xcodeproj  # then press ⌘R
+open Noesis.xcodeproj  # then press ⌘R
 ```
 
 **First launch notes**
@@ -62,12 +62,12 @@ open AgentMode.xcodeproj  # then press ⌘R
 - macOS will ask permission to send **notifications** — allow it, that's how
   you learn your overnight task finished.
 - If Gatekeeper complains about the ad-hoc-signed app, right-click
-  `AgentMode.app` → **Open** → **Open**.
+  `Noesis.app` → **Open** → **Open**.
 
 ## Step 3 — Use it
 
 1. Click the menu-bar icon to open the panel. You'll see
-   `Agent Mode: ON`, detected agents with runtime / CPU / memory, and the
+   `Noesis · Agent Mode ON`, detected agents with runtime / CPU / memory, and the
    current power, battery, and sleep state. Each agent's processes are folded
    into one row, split into **Running now** (used CPU in the last 3 minutes)
    and **Idle — possibly unfinished** (alive but doing nothing — waiting for
@@ -104,17 +104,17 @@ battery, enable **Lid-closed mode (admin)** in the menu:
 | Monitored processes | built-ins | Add your own name substrings (e.g. `my-agent`) |
 | Launch at login | off | Registers via `SMAppService` |
 
-Agent Mode never engages below 10 % battery and never overrides macOS thermal
+Noesis never engages below 10 % battery and never overrides macOS thermal
 or emergency-shutdown protections.
 
 ## Verify it's working
 
 ```bash
-pmset -g assertions | grep -A2 "Agent Mode"
+pmset -g assertions | grep -A2 "Noesis"
 ```
 
 While an agent is running you should see a `PreventUserIdleSystemSleep`
-assertion named "Agent Mode: AI agents are working".
+assertion named "Noesis: AI agents are working".
 
 Quick test without a real agent: toggle **Keep awake even with no agents** in
 the menu, or add a custom process name in Settings (e.g. `yes`) and run

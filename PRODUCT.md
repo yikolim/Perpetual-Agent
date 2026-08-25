@@ -1,4 +1,4 @@
-# Agent Mode — Product Description Package
+# Noesis — Product Description Package
 
 > Handoff document for building the product/landing page. Everything the page
 > needs — copy, features, links, UI description, FAQ — is in this file.
@@ -7,9 +7,9 @@
 
 ## 1. Identity
 
-- **Product name:** Agent Mode
+- **Product name:** Noesis (from Greek *νόησις* — direct apprehension by the intellect; repo: Perpetual-Agent)
 - **Repository:** https://github.com/yikolim/Perpetual-Agent
-- **Download (always latest build):** https://github.com/yikolim/Perpetual-Agent/releases/download/latest/AgentMode.zip
+- **Download (always latest build):** https://github.com/yikolim/Perpetual-Agent/releases/download/latest/Noesis.zip
 - **All releases:** https://github.com/yikolim/Perpetual-Agent/releases
 - **Platform:** macOS 14 (Sonoma) or newer · universal binary (Apple Silicon + Intel)
 - **Price:** Free, open source
@@ -25,11 +25,11 @@ Alternates:
 
 - Your Mac sleeps when your agents finish — not when you close it.
 - Turn your Mac into an always-on AI agent machine.
-- Amphetamine manages sleep. Agent Mode manages unattended AI work.
+- Amphetamine manages sleep. Noesis manages unattended AI work.
 
 One-paragraph description (for meta/OG and app directories):
 
-> Agent Mode is a free macOS menu-bar app that keeps your Mac awake while AI
+> Noesis is a free macOS menu-bar app that keeps your Mac awake while AI
 > coding agents like Claude Code and Codex are working — and automatically
 > restores normal sleep the moment they finish. It detects agents on its own,
 > shows their live status, protects your battery, and notifies you when your
@@ -49,9 +49,9 @@ The workarounds are all bad:
 
 ## 4. The solution (page section)
 
-Agent Mode is an **agent-aware supervisor**, not a keep-awake toggle:
+Noesis is an **agent-aware supervisor**, not a keep-awake toggle:
 
-1. **Start your agent.** Run Claude Code, Codex, or any long task. Agent Mode
+1. **Start your agent.** Run Claude Code, Codex, or any long task. Noesis
    detects it within seconds — no configuration.
 2. **Walk away.** The Mac stays awake exactly as long as the work exists.
    Optional lid-closed mode keeps it running with the laptop shut.
@@ -84,7 +84,7 @@ Menu-bar icon states:
 - ⏱ `bolt.badge.clock` — grace period counting down
 
 Dropdown panel (≈300 px wide, native macOS styling), top to bottom:
-1. Header: green status dot, "**Agent Mode: ON**", on/off switch
+1. Header: green status dot, "**Noesis · Agent Mode ON**", on/off switch
 2. Status line: "Keeping Mac awake" / "Waiting for agents" / "Grace period"
 3. Agent rows: `Claude Code — Running — 37 min` with `pid 4821 · 62% CPU · 412 MB`
 4. Power block: `Power: Connected · Battery: 92% · Sleep: Disabled while agents are active`
@@ -97,8 +97,8 @@ or amber bolt for active). Keep Apple-native feel — this is a real native app.
 
 ## 7. How to get it (CTA section)
 
-1. **[Download AgentMode.zip](https://github.com/yikolim/Perpetual-Agent/releases/download/latest/AgentMode.zip)**
-2. Unzip → drag **AgentMode.app** to Applications
+1. **[Download Noesis.zip](https://github.com/yikolim/Perpetual-Agent/releases/download/latest/Noesis.zip)**
+2. Unzip → drag **Noesis.app** to Applications
 3. First launch: right-click → **Open** → Open (build is ad-hoc signed, not notarized)
 4. Allow notifications; find the moon icon in your menu bar
 
@@ -116,7 +116,7 @@ Or build from source in ~30 s with just Command Line Tools:
 
 | vs. | Difference |
 |---|---|
-| Amphetamine / KeepingYouAwake | Those keep the Mac awake until you remember to turn them off. Agent Mode knows what's running and returns to normal sleep by itself. |
+| Amphetamine / KeepingYouAwake | Those keep the Mac awake until you remember to turn them off. Noesis knows what's running and returns to normal sleep by itself. |
 | caffeinate / pmset | No Terminal, no sudo memorized, no forgotten `disablesleep 1`. State is always restored — even after a crash. |
 | Cloud agent platforms | Your code, your machine, your API keys — nothing leaves the laptop. |
 
