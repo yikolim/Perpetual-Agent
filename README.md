@@ -144,7 +144,7 @@ the menu, or add a custom process name in Settings (e.g. `yes`) and run
 | State safety | Prior `SleepDisabled` value written to `~/Library/Application Support/AgentMode/power-restore.json` **before** any change; restored on stop, quit, or next launch after a crash |
 | Agent detection | `proc_listallpids` / `proc_pidpath` / `proc_name` + `sysctl(KERN_PROCARGS2)` argv inspection for interpreters, polled every 3 s |
 | Resource stats | `proc_pid_rusage` — CPU % from mach-time deltas, memory from `ri_phys_footprint` |
-| Notifications | `UserNotifications`: finished, disappeared, battery threshold, stopped, restored, crash recovery |
+| Notifications | `UserNotifications`: agent finished (whole-agent level, ≥60 s runtime, 2 min cooldown), battery threshold, stopped, crash recovery |
 | Launch at login | `SMAppService.mainApp` |
 
 ### State flow

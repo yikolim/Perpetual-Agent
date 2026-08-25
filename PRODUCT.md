@@ -72,7 +72,7 @@ Agent Mode is an **agent-aware supervisor**, not a keep-awake toggle:
 | Screen keep-awake | Opt-in: keep the display on while agents are detected — watch the run live without touching the mouse; screen sleep returns the moment work ends. |
 | Bulletproof restore | Your previous sleep settings are recorded before any change and restored on stop, quit — or automatically at next launch after a crash or force-quit. |
 | Failsafe timeout | Never stays awake past a configurable limit (default 12 h), even if a process wedges. |
-| Notifications | Agent finished, agent disappeared, battery threshold, mode stopped, sleep restored. |
+| Notifications | Agent finished (per agent, with cooldown — no helper-process noise), battery threshold, mode stopped, sleep restored. |
 | Invisible by design | No Dock icon, no window clutter — one small moon/bolt icon in the menu bar. Launch-at-login optional. |
 | Zero dependencies | Native Swift/SwiftUI. No Electron, no background services, ~280 KB download. |
 
