@@ -68,7 +68,10 @@ open AgentMode.xcodeproj  # then press ⌘R
 
 1. Click the menu-bar icon to open the panel. You'll see
    `Agent Mode: ON`, detected agents with runtime / CPU / memory, and the
-   current power, battery, and sleep state.
+   current power, battery, and sleep state. Each agent's processes are folded
+   into one row, split into **Running now** (used CPU in the last 3 minutes)
+   and **Idle — possibly unfinished** (alive but doing nothing — waiting for
+   input, or a session you forgot about).
 2. Start an agent — e.g. run `claude` in a terminal with a long task. Within
    ~3 seconds the icon switches to a **filled bolt** and the panel shows
    `Claude Code — Running — Nm`. Your Mac now won't idle-sleep.

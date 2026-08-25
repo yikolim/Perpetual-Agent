@@ -64,7 +64,7 @@ Agent Mode is an **agent-aware supervisor**, not a keep-awake toggle:
 | Feature | Copy |
 |---|---|
 | Automatic agent detection | Recognizes Claude Code, Codex, OpenClaw, Cursor Agent, and Aider out of the box — even running under node, bun, or python. Add any process of your own. |
-| Live status | Menu-bar panel shows each agent's runtime, CPU %, and memory, plus power, battery, and sleep state at a glance. |
+| Live status | Menu-bar panel groups each agent's processes into one row and splits them into "Running now" vs "Idle — possibly unfinished", with runtime, CPU %, and memory, plus power, battery, and sleep state at a glance. |
 | Smart sleep | Stays awake only while work exists. Configurable grace period after the last agent exits: immediately, 5, 15, 30 minutes, or never. |
 | Lid-closed mode | Optional: keep running with the laptop closed, on battery. Uses the macOS admin dialog — the app never sees your password. |
 | Battery protection | Configurable cutoff (default 20 %), optional require-charger mode, hard floor at 10 %. Never fights macOS thermal protection. |
